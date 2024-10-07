@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import DashboardPage from "./pages/DashboardPage";
+import Navbar from "./components/navbar/Navbar";
 
 const MainLayout = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const MainLayout = () => {
       style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
     >
       <div style={{ flex: 1 }}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<DashboardPage />} />
         </Routes>
