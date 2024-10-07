@@ -7,7 +7,7 @@ function MyTasks() {
       display={"flex"}
       flexDirection={"column"}
       alignItems={"center"}
-      sx={{ backgroundColor: "#1c1c1c", color: "#fff", padding: "1rem" }}
+      sx={{ height: "100vh", padding: "1rem" }}
     >
       <Typography variant="h3">My Tasks</Typography>
       <TaskFolder />

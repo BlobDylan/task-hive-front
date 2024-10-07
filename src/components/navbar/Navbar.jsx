@@ -1,4 +1,4 @@
-import { AppBar, Box, IconButton, Button, Toolbar, Icon } from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 
 import { Menu as MenuIcon, Person } from "@mui/icons-material";
 
@@ -12,7 +12,6 @@ function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
@@ -22,7 +21,6 @@ function Navbar() {
             edge="end"
             color="inherit"
             aria-label="person"
-            sx={{ mr: 2 }}
           >
             <Person />
           </IconButton>

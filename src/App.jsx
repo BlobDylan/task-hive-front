@@ -8,6 +8,7 @@ import {
 
 import DashboardPage from "./pages/DashboardPage";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const MainLayout = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const MainLayout = () => {
         <Routes>
           <Route path="/" element={<DashboardPage />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );
