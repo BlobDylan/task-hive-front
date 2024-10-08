@@ -4,24 +4,14 @@ import { Menu as MenuIcon, Person } from "@mui/icons-material";
 
 function Navbar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box>
+      <AppBar position="static" sx={{ backgroundColor: "primary.main" }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          >
+          <IconButton size="large" edge="start" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton
-            size="large"
-            edge="end"
-            color="inherit"
-            aria-label="person"
-          >
+          <IconButton size="large" edge="end" aria-label="person">
             <Person />
           </IconButton>
         </Toolbar>

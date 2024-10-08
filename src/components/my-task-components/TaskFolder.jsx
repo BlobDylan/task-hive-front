@@ -11,7 +11,7 @@ import Task from "./Task";
 
 function TaskFolder() {
   return (
-    <Accordion sx={{ width: "100%" }}>
+    <Accordion sx={{ width: "100%", backgroundColor: "primary.main" }}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel3-content"

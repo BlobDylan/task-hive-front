@@ -1,4 +1,8 @@
 import "./App.css";
+
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./styles/Theme";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -30,9 +34,11 @@ const MainLayout = () => {
 
 const App = () => {
   return (
-    <Router>
-      <MainLayout />
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <MainLayout />
+      </Router>
+    </ThemeProvider>
   );
 };
 

@@ -22,9 +22,7 @@ function LinearProgressWithLabel(props) {
         width: "100%",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#e8e8e8",
         borderRadius: "5px",
-        boxShadow: "0 0 5px 0 rgba(0,0,0,0.2)",
         ml: 1,
         mr: 1,
       }}
@@ -34,17 +32,21 @@ function LinearProgressWithLabel(props) {
       </IconButton>
       <Checkbox />
       <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Task
-        </Typography>
+        <Typography variant="body2">Task</Typography>
       </Box>
       <Box sx={{ width: "100%", mr: 1, ml: 1 }}>
-        <LinearProgress variant="determinate" {...props} />
+        <LinearProgress
+          variant="determinate"
+          {...props}
+          sx={{
+            "& .MuiLinearProgress-bar": {
+              backgroundColor: "text.primary", // Change this to your desired color
+            },
+          }}
+        />
       </Box>
       <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          {`${Math.round(props.value)}%`}
-        </Typography>
+        <Typography variant="body2">{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
   );
@@ -57,7 +59,6 @@ function SubTask() {
         width: "80%",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#e8e8e8",
         borderRadius: "5px",
         boxShadow: "0 0 5px 0 rgba(0,0,0,0.2)",
         ml: 5,
@@ -70,9 +71,7 @@ function SubTask() {
       </IconButton>
       <Checkbox />
       <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Sub Task
-        </Typography>
+        <Typography variant="body2">Sub Task</Typography>
       </Box>
     </Box>
   );
