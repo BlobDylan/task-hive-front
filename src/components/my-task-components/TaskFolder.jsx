@@ -12,12 +12,13 @@ import {
   DialogTitle,
   TextField,
   Button,
+  Stack,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Task from "./Task";
 
-function TaskFolder() {
+function TaskFolder({ folder }) {
   const [openaddtask, setOpenaddtask] = useState(false);
 
   const handleOpenaddtask = () => {
@@ -36,10 +37,18 @@ function TaskFolder() {
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          Folder
+          {folder.title}
         </AccordionSummary>
         <AccordionDetails>
-          <Task />
+          <Stack spacing={1} sx={{ width: "100%" }}>
+            {folder.folders &&
+              folder.folders.map((folder, index) => (
+                <TaskFolder key={index} folder={folder} />
+              ))}
+            {folder.tasks.map((task, index) => (
+              <Task key={index} task={task} />
+            ))}
+          </Stack>
         </AccordionDetails>
         <AccordionActions>
           <IconButton onClick={handleOpenaddtask}>
